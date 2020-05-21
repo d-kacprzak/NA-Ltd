@@ -1,0 +1,6 @@
+@import "variables";
+
+@mixin textColor {
+  font-family: $primary-font;
+  color: $text-color;
+}

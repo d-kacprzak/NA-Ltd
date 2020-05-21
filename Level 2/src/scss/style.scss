@@ -1,1 +1,71 @@
+@import "partials/mixins";
+@import "partials/variables";
+*, *::before,*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+.wrapper {
+  width: 80rem;
+  height: 38rem;
+  background-color: $primary-bg-color;
+  margin: 0 auto;
+  @media (max-width: 1300px) {
+      width: 100%;
+      height: auto;
+      background-color: $second-bg-color;
+  }
+  &__content {
+    background-color: $second-bg-color;
+    @media (max-width: 1300px){
+      border: 1px solid $primary-bg-color;
+    }
+    @media (max-width: 1200px) {
+      width: 37.5rem;
+    }
+  }
+}
+
+.box-1, .box-2 {
+  background-color: $second-bg-color;
+  width: 570px;
+  height: 408px;
+  @media (max-width: 576px) {
+      width: 90vw;
+      height: auto;
+  }
+  @media (max-width: 768px) {
+      width: 80vw;
+      height: auto;
+  }
+}
+
+.title, .title__paragraph {
+  @include textColor;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 86px 0 43px;
+  &__paragraph {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+    line-height: 26px;
+  }
+}
+
+.button {
+  background-color: $btn-color;
+  color: $second-bg-color;
+  font-weight: 700;
+  width: 135px;
+  height: 47px;
+  border-radius: 25px;
+  margin-bottom: 83px;
+  :hover {
+    color: $second-bg-color;
+  }
+}
